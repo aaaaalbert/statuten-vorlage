@@ -24,39 +24,61 @@
 
 % Kürzel für Vorstandsmitglieder usw.
 \usepackage{glossaries}
-\newglossaryentry{obmensch}{name=Obfrau / Obmann,description=}
-\newglossaryentry{obmensch1}{name=die Obfrau / der Obmann,description=}
-\newglossaryentry{obmensch2}{name=der Obfrau / des Obmanns,description=}
-\newglossaryentry{obmensch3}{name=der Obfrau / dem Obmann,description=}
-\newglossaryentry{obmensch4}{name=die Obfrau / den Obmann,description=}
+% Fälle der Glossar-Einträge, inklusive bestimmter Artikel
+% (Verwendung der Nominative ohne Artikel über \gls usw.,
+% Fälle mit Artikeln via \glsuseri usw.)
+\newglossaryentry{obmensch}{description=,
+name=Obfrau / Obmann,
+user1=die Obfrau / der Obmann,
+user2=der Obfrau / des Obmanns,
+user3=der Obfrau / dem Obmann,
+user4=die Obfrau / den Obmann}
 
-\newglossaryentry{schrift}{name=Schriftführerin / Schriftführer,description=}
-\newglossaryentry{schrift1}{name=die Schriftführerin / der Schriftführer,description=}
-\newglossaryentry{schrift2}{name=der Schriftführerin / des Schriftführers,description=}
-\newglossaryentry{schrift3}{name=der Schriftführerin / dem Schriftführer,description=}
-\newglossaryentry{schrift4}{name=die Schriftführer / den Schriftführer,description=}
+\newglossaryentry{schrift}{description=,
+name=Schriftführerin / Schriftführer,
+user1=die Schriftführerin / der Schriftführer,
+user2=der Schriftführerin / des Schriftführers,
+user3=der Schriftführerin / dem Schriftführer,
+user4=die Schriftführer / den Schriftführer}
 
-\newglossaryentry{kassa}{name=Kassierin / Kassier,description=}
-\newglossaryentry{kassa1}{name=die Kassierin / der Kassier,description=}
-\newglossaryentry{kassa2}{name=der Kassierin / des Kassiers,description=}
-\newglossaryentry{kassa3}{name=der Kassierin / dem Kassier,description=}
-\newglossaryentry{kassa4}{name=die Kassierin / den Kassier,description=}
+\newglossaryentry{kassa}{description=,
+name=Kassierin / Kassier,
+user1=die Kassierin / der Kassier,
+user2=der Kassierin / des Kassiers,
+user3=der Kassierin / dem Kassier,
+user4=die Kassierin / den Kassier}
 
-\newglossaryentry{repruef}{name=Rechnungsprüferin / Rechnungsprüfer,plural=Rechnungsprüferinnen / Rechnungsprüfer,description=}
-\newglossaryentry{repruef2*}{name=Rechnungsprüferin / Rechnungsprüfers,description=}
-\newglossaryentry{repruef3}{name=der Rechnungsprüferin / dem Rechnungsprüfer,plural=den Rechnungsprüferinnen / den Rechnungsprüfern,description=}
-\newglossaryentry{repruef4}{name=die Rechnungsprüferin / den Rechnungsprüfer,plural=die Rechnungsprüferinnen / die Rechnungsprüfer,description=}
+% Achtung 1, Genitiv ohne bestimmte Artikel!
+% Achtung 2, separater Eintrag für Pluralform!
+\newglossaryentry{repruef}{description=,
+name=Rechnungsprüferin / Rechnungsprüfer,
+plural=Rechnungsprüferinnen /Rechnungsprüfer,
+user2=Rechnungsprüferin / Rechnungsprüfers,
+user3=der Rechnungsprüferin / dem Rechnungsprüfer,
+user4=die Rechnungsprüferin / den Rechnungsprüfer}
+
+% Plural für \gls{repruef}
+\newglossaryentry{repruef-pl}{description=,
+name=Rechnungsprüferinnen / Rechnungsprüfer,
+user3=den Rechnungsprüferinnen / den Rechnungsprüfern
+user4=die Rechnungsprüferinnen / die Rechnungsprüfer}
+
+\newglossaryentry{stv}{description=,
+name=Stellvertreterin / Stellvertreter,
+plural=Stellvertreterinnen / Stellvertreter,}
+
+\newglossaryentry{gruend}{description=,
+name=die Gründerinnen / die Gründer,}
 
 
-\newglossaryentry{stv}{name=Stellvertreterin / Stellvertreter,plural=Stellvertreterinnen / Stellvertreter,description=}
+\newglossaryentry{schiri}{description=,
+name=Schiedsrichterin / Schiedsrichter,
+plural=Schiedsrichterinnen / Schiedsrichter}
 
-\newglossaryentry{gruend1}{name=die Gründerinnen / die Gründer,description=}
-
-
-\newglossaryentry{schiri}{name=Schiedsrichterin / Schiedsrichter,plural=Schiedsrichterinnen / Schiedsrichter,description=}
-
-\newglossaryentry{kura}{name=Kuratorin / Kurator,description=}
-\newglossaryentry{kura2*}{name=Kuratorin / Kurators,description=}
+% Achtung, Genitiv ohne bestimmten Artikel!
+\newglossaryentry{kura}{description=,
+name=Kuratorin / Kurator,
+user2=Kuratorin / Kurators}
 
 
 
@@ -129,7 +151,7 @@ Der Verein, dessen Tätigkeit nicht auf Gewinn gerichtet ist, bezweckt
     % Das sind die Offene Gesellschaft (OG) und die Kommanditgesellschaft (KG).
     werden.
     \item Über die Aufnahme von ordentlichen und außerordentlichen Mitgliedern entscheidet der Vorstand. Die Aufnahme kann ohne Angabe von Gründen verweigert werden.
-    \item Bis zur Entstehung des Vereins erfolgt die vorläufige Aufnahme von ordentlichen und außerordentlichen Mitgliedern durch \gls{gruend1} des Vereins, im Fall eines bereits bestellten Vorstands durch diesen. Diese Mitgliedschaft wird erst mit Entstehung des Vereins wirksam. Wird ein Vorstand erst nach Entstehung des Vereins bestellt, erfolgt auch die (definitive) Aufnahme ordentlicher und außerordentlicher Mitglieder bis dahin durch \gls{gruend1} des Vereins.
+    \item Bis zur Entstehung des Vereins erfolgt die vorläufige Aufnahme von ordentlichen und außerordentlichen Mitgliedern durch \gls{gruend} des Vereins, im Fall eines bereits bestellten Vorstands durch diesen. Diese Mitgliedschaft wird erst mit Entstehung des Vereins wirksam. Wird ein Vorstand erst nach Entstehung des Vereins bestellt, erfolgt auch die (definitive) Aufnahme ordentlicher und außerordentlicher Mitglieder bis dahin durch \gls{gruend} des Vereins.
     \item Die Ernennung zum Ehrenmitglied erfolgt auf Antrag des Vorstands durch die Generalversammlung.
 \end{absatz}
 
@@ -173,8 +195,8 @@ Organe des Vereins sind die Generalversammlung (§§ \ref{generalversammlung} un
         \item \label{aogv-beschluss} Beschluss des Vorstands oder der ordentlichen Generalversammlung,
         \item \label{aogv-zehntel} schriftlichen Antrag von mindestens einem Zehntel der Mitglieder,
         \item \label{aogv-rp-verlangen} Verlangen der \glspl{repruef} (§ 21 Abs. 5 erster Satz VereinsG),
-        \item \label{aogv-rp-beschluss} Beschluss der \glspl{repruef} /einer bzw. eines \gls{repruef2*} (§ 21 Abs. 5 zweiter Satz VereinsG, § \ref{vorstand} Abs. \ref{vorstand-wahl} dritter Satz dieser Statuten),
-        \item \label{aogv-kurator} Beschluss eines / einer gerichtlich bestellten \gls{kura2*} (§ \ref{vorstand} Abs. \ref{vorstand-wahl} letzter Satz dieser Statuten)
+        \item \label{aogv-rp-beschluss} Beschluss der \glspl{repruef} /einer bzw. eines \glsuserii{repruef} (§ 21 Abs. 5 zweiter Satz VereinsG, § \ref{vorstand} Abs. \ref{vorstand-wahl} dritter Satz dieser Statuten),
+        \item \label{aogv-kurator} Beschluss eines / einer gerichtlich bestellten \glsuserii{kura} (§ \ref{vorstand} Abs. \ref{vorstand-wahl} letzter Satz dieser Statuten)
     \end{littera}
     binnen vier Wochen statt.
     \item Sowohl zu den ordentlichen wie auch zu den außerordentlichen Generalversammlungen sind alle Mitglieder mindestens zwei Wochen vor dem Termin schriftlich, mittels Telefax oder per E-Mail (an die vom Mitglied dem Verein bekanntgegebene Fax-Nummer oder E-Mail-Adresse) einzuladen. Die Anberaumung der Generalversammlung hat unter Angabe der Tagesordnung zu erfolgen. Die Einberufung erfolgt durch den Vorstand (Abs. \ref{generalversammlung-exists} und Abs. \ref{generalversammlung-ao} lit. \ref{aogv-beschluss}, \ref{aogv-zehntel}, \ref{aogv-rp-verlangen}), durch die \glspl{repruef} / eine bzw. einen \gls{repruef} (Abs. \ref{generalversammlung-ao} lit. \ref{aogv-rp-beschluss}) oder durch eine / einen gerichtlich bestellte / bestellten \gls{kura} (Abs. \ref{generalversammlung-ao} lit. \ref{aogv-kurator}).
@@ -183,7 +205,7 @@ Organe des Vereins sind die Generalversammlung (§§ \ref{generalversammlung} un
     \item Bei der Generalversammlung sind alle Mitglieder teilnahmeberechtigt. Stimmberechtigt sind nur die ordentlichen und die Ehrenmitglieder. Jedes Mitglied hat eine Stimme. Die Übertragung des Stimmrechts auf ein anderes Mitglied im Wege einer schriftlichen Bevollmächtigung ist zulässig.
     \item Die Generalversammlung ist ohne Rücksicht auf die Anzahl der Erschienenen beschlussfähig.
     \item Die Wahlen und die Beschlussfassungen in der Generalversammlung erfolgen in der Regel mit einfacher Mehrheit der abgegebenen gültigen Stimmen. Beschlüsse, mit denen das Statut des Vereins geändert oder der Verein aufgelöst werden soll, bedürfen jedoch einer qualifizierten Mehrheit von zwei Dritteln der abgegebenen gültigen Stimmen.
-    \item Den Vorsitz in der Generalversammlung führt \gls{obmensch1}, in dessen/deren Verhinderung sein/e/ihr/e \gls{stv}. Wenn auch diese/r verhindert ist, so führt das an Jahren älteste anwesende Vorstandsmitglied den Vorsitz.
+    \item Den Vorsitz in der Generalversammlung führt \glsuseri{obmensch}, in dessen/deren Verhinderung sein/e/ihr/e \gls{stv}. Wenn auch diese/r verhindert ist, so führt das an Jahren älteste anwesende Vorstandsmitglied den Vorsitz.
 \end{absatz}
 
 
@@ -212,10 +234,10 @@ Der Generalversammlung sind folgende Aufgaben vorbehalten:
     \item \label{vorstand-periode} Die Funktionsperiode des Vorstands beträgt
     % zB zwei oder vier Jahre (abgestimmt auf den Abstand zwischen ordentlichen Generalversammlungen nach § 9 Abs 1).
      ....  Jahre; Wiederwahl ist möglich. Jede Funktion im Vorstand ist persönlich auszuüben.
-     \item Der Vorstand wird von \gls{obmensch3}, bei Verhinderung von seinem/seiner/ihrem/ihrer \gls{stv}, schriftlich oder mündlich einberufen. Ist auch diese/r auf unvorhersehbar lange Zeit verhindert, darf jedes sonstige Vorstandsmitglied den Vorstand einberufen.
+     \item Der Vorstand wird von \glsuseriii{obmensch}, bei Verhinderung von seinem/seiner/ihrem/ihrer \gls{stv}, schriftlich oder mündlich einberufen. Ist auch diese/r auf unvorhersehbar lange Zeit verhindert, darf jedes sonstige Vorstandsmitglied den Vorstand einberufen.
      \item Der Vorstand ist beschlussfähig, wenn alle seine Mitglieder eingeladen wurden und mindestens die Hälfte von ihnen anwesend ist.
      \item Der Vorstand fasst seine Beschlüsse mit einfacher Stimmenmehrheit; bei Stimmengleichheit gibt die Stimme des/der Vorsitzenden den Ausschlag.
-     \item Den Vorsitz führt \gls{obmensch1}, bei Verhinderung sein/e/ihr/e \gls{stv}. Ist auch diese/r verhindert, obliegt der Vorsitz dem an Jahren ältesten anwesenden Vorstandsmitglied oder jenem Vorstandsmitglied, das die übrigen Vorstandsmitglieder mehrheitlich dazu bestimmen.
+     \item Den Vorsitz führt \glsuseri{obmensch}, bei Verhinderung sein/e/ihr/e \gls{stv}. Ist auch diese/r verhindert, obliegt der Vorsitz dem an Jahren ältesten anwesenden Vorstandsmitglied oder jenem Vorstandsmitglied, das die übrigen Vorstandsmitglieder mehrheitlich dazu bestimmen.
      \item \label{vorstand-ende} Außer durch den Tod und Ablauf der Funktionsperiode (Abs. \ref{vorstand-periode}) erlischt die Funktion eines Vorstandsmitglieds durch Enthebung (Abs. \ref{vorstand-enthebung}) und Rücktritt (Abs. \ref{vorstand-ruecktritt}). 
      \item \label{vorstand-enthebung} Die Generalversammlung kann jederzeit den gesamten Vorstand oder einzelne seiner Mitglieder entheben. Die Enthebung tritt mit Bestellung des neuen Vorstands bzw Vorstandsmitglieds in Kraft.
      \item \label{vorstand-ruecktritt} Die Vorstandsmitglieder können jederzeit schriftlich ihren Rücktritt erklären. Die Rücktrittserklärung ist  an den Vorstand, im Falle des Rücktritts des gesamten Vorstands an die Generalversammlung zu richten. Der Rücktritt wird erst mit Wahl bzw. Kooptierung (Abs. \ref{vorstand-wahl}) eines Nachfolgers wirksam.
@@ -239,14 +261,14 @@ Dem Vorstand obliegt die Leitung des Vereins. Er ist das ,,Leitungsorgan'' im Si
 
 \section{Besondere Obliegenheiten einzelner Vorstandsmitglieder}\label{vorstand-besonders}
 \begin{absatz}
-    \item \Gls{obmensch1} führt die laufenden Geschäfte des Vereins. \Gls{schrift1} unterstützt \gls{obmensch4} bei der Führung der Vereinsgeschäfte.
-    \item \label{vorstand-vertretung} \Gls{obmensch1} vertritt den Verein nach außen. Schriftliche Ausfertigungen des Vereins bedürfen zu ihrer Gültigkeit der Unterschriften \gls{obmensch2} und \gls{schrift2}, in Geldangelegenheiten (vermögenswerte Dispositionen) \gls{obmensch2} und \gls{kassa2}. Rechtsgeschäfte zwischen Vorstandsmitgliedern und Verein bedürfen der Zustimmung eines anderen Vorstandsmitglieds.
+    \item \Glsuseri{obmensch} führt die laufenden Geschäfte des Vereins. \Glsuseri{schrift} unterstützt \glsuseriv{obmensch} bei der Führung der Vereinsgeschäfte.
+    \item \label{vorstand-vertretung} \Glsuseri{obmensch} vertritt den Verein nach außen. Schriftliche Ausfertigungen des Vereins bedürfen zu ihrer Gültigkeit der Unterschriften \glsuserii{obmensch} und \glsuserii{schrift}, in Geldangelegenheiten (vermögenswerte Dispositionen) \glsuserii{obmensch} und \glsuserii{kassa}. Rechtsgeschäfte zwischen Vorstandsmitgliedern und Verein bedürfen der Zustimmung eines anderen Vorstandsmitglieds.
     \item Rechtsgeschäftliche Bevollmächtigungen, den Verein nach außen zu vertreten bzw. für ihn zu zeichnen, können ausschließlich von den in Abs. \ref{vorstand-vertretung} genannten Vorstandsmitgliedern erteilt werden.
-    \item Bei Gefahr im Verzug ist \gls{obmensch1} berechtigt, auch in Angelegenheiten, die in den Wirkungsbereich der Generalversammlung oder des Vorstands fallen, unter eigener Verantwortung selbständig Anordnungen zu treffen; im Innenverhältnis bedürfen diese jedoch der nachträglichen Genehmigung durch das zuständige Vereinsorgan.
-    \item \Gls{obmensch1} führt den Vorsitz in der Generalversammlung und im Vorstand.
-    \item \Gls{schrift1} führt die Protokolle der Generalversammlung und des Vorstands.
-    \item \Gls{kassa1} ist für die ordnungsgemäße Geldgebarung des Vereins verantwortlich.
-    \item Im Fall der Verhinderung treten an die Stelle \gls{obmensch2}, \gls{schrift2} oder \gls{kassa2} ihre \glspl{stv}.
+    \item Bei Gefahr im Verzug ist \glsuseri{obmensch} berechtigt, auch in Angelegenheiten, die in den Wirkungsbereich der Generalversammlung oder des Vorstands fallen, unter eigener Verantwortung selbständig Anordnungen zu treffen; im Innenverhältnis bedürfen diese jedoch der nachträglichen Genehmigung durch das zuständige Vereinsorgan.
+    \item \Glsuseri{obmensch} führt den Vorsitz in der Generalversammlung und im Vorstand.
+    \item \Glsuseri{schrift} führt die Protokolle der Generalversammlung und des Vorstands.
+    \item \Glsuseri{kassa} ist für die ordnungsgemäße Geldgebarung des Vereins verantwortlich.
+    \item Im Fall der Verhinderung treten an die Stelle \glsuserii{obmensch}, \glsuserii{schrift} oder \glsuserii{kassa} ihre \glspl{stv}.
 \end{absatz}
 
 
@@ -256,8 +278,8 @@ Dem Vorstand obliegt die Leitung des Vereins. Er ist das ,,Leitungsorgan'' im Si
     \item Zwei \glspl{repruef} werden von der Generalversammlung auf die Dauer von
     % zB zwei oder vier Jahre (abgestimmt auf den Abstand zwischen ordentlichen Generalversammlungen nach § 9 Abs 1).
     .... Jahren gewählt. Wiederwahl ist möglich. Die \glspl{repruef} dürfen keinem Organ – mit Ausnahme der Generalversammlung – angehören, dessen Tätigkeit Gegenstand der Prüfung ist.
-    \item \Glspl{repruef3} obliegt die laufende Geschäftskontrolle sowie die Prüfung der Finanzgebarung des Vereins im Hinblick auf die Ordnungsmäßigkeit der Rechnungslegung und die statutengemäße Verwendung der Mittel. Der Vorstand hat \glspl{repruef3} die erforderlichen Unterlagen vorzulegen und die erforderlichen Auskünfte zu erteilen. \Glspl{repruef} haben dem Vorstand über das Ergebnis der Prüfung zu berichten.
-    \item Rechtsgeschäfte zwischen \glspl{repruef3} und Verein bedürfen der Genehmigung durch die Generalversammlung. Im Übrigen gelten für \glspl{repruef4} die Bestimmungen des § \ref{vorstand} Abs. \ref{vorstand-ende}, \ref{vorstand-enthebung}, \ref{vorstand-ruecktritt} sinngemäß.
+    \item \Glsuseriii{repruef-pl} obliegt die laufende Geschäftskontrolle sowie die Prüfung der Finanzgebarung des Vereins im Hinblick auf die Ordnungsmäßigkeit der Rechnungslegung und die statutengemäße Verwendung der Mittel. Der Vorstand hat \glsuseriii{repruef-pl} die erforderlichen Unterlagen vorzulegen und die erforderlichen Auskünfte zu erteilen. \Glspl{repruef} haben dem Vorstand über das Ergebnis der Prüfung zu berichten.
+    \item Rechtsgeschäfte zwischen \glsuseriii{repruef-pl} und Verein bedürfen der Genehmigung durch die Generalversammlung. Im Übrigen gelten für \glsuseriv{repruef-pl} die Bestimmungen des § \ref{vorstand} Abs. \ref{vorstand-ende}, \ref{vorstand-enthebung}, \ref{vorstand-ruecktritt} sinngemäß.
 \end{absatz}
 
 
