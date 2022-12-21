@@ -16,11 +16,11 @@
 % Absätze nummeriert mit eingeklammerten Zahlen
 \usepackage{enumitem}
 \newlist{absatz}{enumerate}{1}
-\setlist[absatz, 1]{label = (\arabic*)}
+\setlist[absatz, 1]{label = (\arabic*), ref = \arabic*}
 
 % Unteraufzählungen mit Buchstaben
 \newlist{littera}{enumerate}{1}
-\setlist[littera, 1]{label = \alph*)}
+\setlist[littera, 1]{label = \alph*), ref = \alph*}
 
 % Kürzel für Vorstandsmitglieder usw.
 \usepackage{glossaries}
